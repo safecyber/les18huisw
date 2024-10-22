@@ -1,0 +1,85 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header met achtergrondafbeelding */
+header {
+    background-image: url('lelystad.jpg'); /* Voeg hier je afbeelding van Lelystad toe */
+    background-size: cover;
+    background-position: center;
+    color: rgb(234, 222, 236);
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Hoofdgedeelte (mobile-first, dus 1 kolom op mobiel) */
+main {
+    padding: 20px;
+}
+
+/* Contentblokken krijgen 100% breedte op mobiel */
+.left-content, .right-content {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Artikelen binnen de rechter content */
+.article {
+    background-color: #c0a8c5;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.article img {
+    max-width: 100%; /* Zorg dat de afbeelding niet groter wordt dan de container */
+    display: block;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #4e5257;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media query voor grotere schermen (desktop-versie) */
+@media (min-width: 768px) {
+    /* Zorg dat de content naast elkaar komt */
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-content {
+        width: 30%;
+    }
+
+    .right-content {
+        width: 65%;
+    }
+
+    /* Afbeelding naast de tekst */
+    .article {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .article img {
+        max-width: 300px;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+}
